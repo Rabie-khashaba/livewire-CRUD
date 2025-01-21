@@ -40,7 +40,7 @@ class EditCustomer extends Component
             'phone' => $this->phone,
         ]);
 
-        session()->flash('success', 'Post updated successfully!');
+        session()->flash('add', 'Post updated successfully!');
 
         return redirect()->to('/customers');
 
