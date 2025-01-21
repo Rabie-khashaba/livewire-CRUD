@@ -7,9 +7,18 @@
     @endif
 
 
+    <div class="row">
+        <div class="col-auto">
+            <button wire:navigate href="/customer/create" class="btn btn-success">Create</button>
+        </div>
+        <div class="col-auto">
+            <input class="form-control" type="text" wire:model.live.debounce.150ms="search" placeholder="Search Customer">
+        </div>
 
-    <button wire:navigate href="/customer/create" class="btn btn-success">Create</button>
-    <table class="table table-success table-striped mt-2">
+    </div>
+
+
+    <table class="table table-sm table-success table-striped mt-2">
         <thead>
         <tr>
             <th scope="col">#</th>
@@ -37,4 +46,5 @@
 
         </tbody>
     </table>
+    {{$customers->links()}}
 </div>
